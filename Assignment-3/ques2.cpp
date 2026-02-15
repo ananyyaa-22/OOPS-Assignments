@@ -1,36 +1,56 @@
 #include <iostream>
 using namespace std;
-class Rectangle{
+
+class Rectangle
+{
   int length;
   int breadth;
 
-  public:
-  Rectangle(){
-    length=0;
-    breadth=0;
-    int area=length*breadth;
-    cout<<area<<endl;
+public:
+  void setData(int l, int b)
+  {
+    length = l;
+    breadth = b;
   }
 
-  Rectangle(int l,int b){
-    length=l;
-    breadth=b;
-    int area=length*breadth;
-    cout<<area<<endl;
+  void display()
+  {
+    cout << "Length = " << length
+         << ", Breadth = " << breadth << endl;
   }
 
-  Rectangle(int x){
-    length=x;
-    breadth=x;
-    int area=length*breadth;
-    cout<<area<<endl;
-  }
-
-  int area(){
-    return length*breadth;
-  }
+  friend void swapData(Rectangle &r1, Rectangle &r2);
 };
 
-int main(){
-  Rectangle arr[3]={Rectangle(),Rectangle(10,20),Rectangle(5)};
+void swapData(Rectangle &r1, Rectangle &r2)
+{
+  int temp;
+
+  temp = r1.length;
+  r1.length = r2.length;
+  r2.length = temp;
+
+  temp = r1.breadth;
+  r1.breadth = r2.breadth;
+  r2.breadth = temp;
+}
+
+int main()
+{
+  Rectangle r1, r2;
+
+  r1.setData(10, 20);
+  r2.setData(5, 8);
+
+  cout << "Before Swapping:\n";
+  r1.display();
+  r2.display();
+
+  swapData(r1, r2);
+
+  cout << "\nAfter Swapping:\n";
+  r1.display();
+  r2.display();
+
+  return 0;
 }
