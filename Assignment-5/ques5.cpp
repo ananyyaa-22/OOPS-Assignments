@@ -1,28 +1,35 @@
 #include <iostream>
 using namespace std;
-class Base {
+class Base
+{
 public:
-    Base() {
-        cout << "Base class constructor called" << endl;
+    Base()
+    {
+        cout << "Base class constructor" << endl;
     }
 
-    ~Base() {
-        cout << "Base class destructor called" << endl;
+    ~Base()
+    {
+        cout << "Base class destructor " << endl;
     }
 };
 
-class Derived : public Base {
+class Derived : public Base
+{
 public:
-    Derived() {
-        cout << "Derived class constructor called" << endl;
+    Derived()
+    {
+        cout << "Derived class constructor" << endl;
     }
 
-    ~Derived() {
-        cout << "Derived class destructor called" << endl;
+    ~Derived()
+    {
+        cout << "Derived class destructor" << endl;
     }
 };
 
-int main() {
-    Derived obj;   
+int main()
+{
+    Derived obj;
     return 0;
 }

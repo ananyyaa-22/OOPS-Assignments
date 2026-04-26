@@ -25,7 +25,7 @@ public:
 
 class Textbook : public Book
 {
-private:
+protected:
   string subject;
 
 public:
@@ -44,12 +44,9 @@ public:
 int main()
 {
   Book b("The Alchemist", "Paulo Coelho", 299.0);
-  cout << "General Book Details:" << endl;
   b.displayBook();
 
-  cout << "\nTextbook Details:" << endl;
-
-  Textbook t("Engineering Mathematics", "B.S. Grewal", 599.0, "Mathematics");
+  Textbook t("Mathematics", "RD Sharma", 599.0, "Mathematics");
   t.displayTextbook();
 
   return 0;

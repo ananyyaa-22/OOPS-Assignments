@@ -1,32 +1,30 @@
 #include <iostream>
 using namespace std;
 
-class Animal
+class Shape
 {
 public:
-  void eat()
+  void draw()
   {
-    cout << "Animal is eating" << endl;
+    cout << "This is a shape" << endl;
   }
 };
 
-class Dog : public Animal
+class Circle : public Shape
 {
 public:
-  void bark()
+  void sides()
   {
-    cout << "Dog is barking" << endl;
+    cout << "Circle has no sides" << endl;
   }
 };
 
 int main()
 {
-  Animal a;
-  a.eat();
-
-  Dog d;
-  d.eat();  // inherited function
-  d.bark(); // own function
-
+  Shape a;
+  a.draw();
+  Circle d;
+  d.draw();  
+  d.sides(); 
   return 0;
 }

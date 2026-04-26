@@ -1,26 +1,56 @@
 #include <iostream>
 using namespace std;
 
-class Base {
-public:
-    int x = 10;
+class Person
+{
+private: 
+    int num =85; 
 protected:
-    int y = 20;
+    int age =10;
+
+public:
+    int id= 25;
 };
 
-class PublicDerived : public Base {};
-class ProtectedDerived : protected Base {};
-class PrivateDerived : private Base {};
+class Student : public Person
+{
+    public: 
+    void print(){
+        cout<< age<< endl;
+    }
+};
+class Teacher : protected Person
+{
+    public: 
+    void print(){
+        cout<<age<<" "<<id<<endl;
+    }
+};
+class Staff : private Person
+{
+    public: 
+    void print(){
+        cout<<age<<" "<<id<<endl;
+    }
+};
 
-int main() {
-    PublicDerived p;
-    cout << p.x << endl;  // ✅ allowed
+int main()
+{
+    Student s;
+    // cout<< s.num; -> invalid
+    // cout<< s.age;
+    s.print();
+    cout<< s.id<< endl;
 
-    ProtectedDerived pr;
-    // cout << pr.x; ❌ error
+    Teacher t;
+    // cout<< t.num;
+    // cout<< t.age;
+    // cout<< t.id;
+    t.print();
 
-    PrivateDerived pv;
-    // cout << pv.x; ❌ error
-
-    return 0;
+    Staff f;
+    // cout<< f.num;
+    // cout<< f.age;
+    // cout<< f.id;
+    f.print();
 }
