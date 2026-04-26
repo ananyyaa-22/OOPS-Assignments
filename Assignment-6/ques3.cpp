@@ -24,7 +24,7 @@ public:
     if (this->accountNumber == to)
     {
       balance += amount;
-      transactionType = "Credit (Deposit)";
+      transactionType = "Credit";
       transactionID = ++globalTransactionID;
     }
     return transactionID;
@@ -37,14 +37,14 @@ public:
       if (balance >= amount)
       {
         balance -= amount;
-        transactionType = "Debit (Transfer)";
+        transactionType = "Debit";
         transactionID = ++globalTransactionID;
       }
     }
     if (this->accountNumber == to)
     {
       balance += amount;
-      transactionType = "Credit (Transfer)";
+      transactionType = "Credit";
       transactionID = globalTransactionID;
     }
     return transactionID;
@@ -56,7 +56,6 @@ public:
     std::cout << "Balance: " << balance << std::endl;
     std::cout << "Last Transaction ID: " << transactionID << std::endl;
     std::cout << "Transaction Type: " << transactionType << std::endl;
-    std::cout << "------------------------" << std::endl;
   }
 };
 

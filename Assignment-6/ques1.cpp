@@ -81,8 +81,8 @@ int main()
 {
   Library lib;
 
-  string t1 = "C++";
-  string a1 = "Bjarne";
+  string t1 = "Maths";
+  string a1 = "RD Sharma";
   int i1 = 101;
 
   string t2 = "DSA";

@@ -13,7 +13,6 @@ private:
 
   void displayDetails()
   {
-    cout << "\n--- Student Details ---\n";
     cout << "Name: " << name << endl;
     cout << "Roll No: " << rollno << endl;
     cout << "Degree: " << degree << endl;

@@ -73,23 +73,20 @@ int main() {
 
     Library lib;
 
-    lib.addNewBook("C++ Basics", "Bjarne Stroustrup", 101);
-    lib.addNewBook("Data Structures", "Mark Allen", 102);
+    lib.addNewBook("Maths", "RD Sharma", 101);
+    lib.addNewBook("Science", "Mark", 102);
 
-    cout << "Library Books:\n";
     lib.displayDetails();
-
     lib.removeBooks(101);
 
     cout << "\nAfter Removal:\n";
     lib.displayDetails();
 
     Book arr1[2] = {
-        Book("Math", "Author1", 201),
+        Book("English", "Author1", 201),
         Book("Physics", "Author2", 202)
     };
 
-    cout << "\nInitializer List Objects:\n";
     for (int i = 0; i < 2; i++) {
         arr1[i].display();
         cout << endl;
