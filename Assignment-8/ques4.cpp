@@ -19,24 +19,27 @@ void bubbleSort(T arr[], int size)
 }
 
 template <typename T>
-void printArray(T arr[], int size){
-  for(int i=0; i<size; i++){
-    cout<<arr[i]<<" ";
+void printArray(T arr[], int size)
+{
+  for (int i = 0; i < size; i++)
+  {
+    cout << arr[i] << " ";
   }
 }
 
-int main(){
-  int arr[]= {5,4,85,4,6,25};
-  int n1=6;
-  
-  cout<<"Before sorting: ";
+int main()
+{
+  int arr[] = {5, 4, 85, 4, 6, 25};
+  int n1 = 6;
+
+  cout << "Before sorting: ";
   printArray(arr, n1);
-  cout<<endl;
+  cout << endl;
 
   bubbleSort(arr, n1);
-  
-  cout<<"After sorting: ";
+
+  cout << "After sorting: ";
   printArray(arr, n1);
-  cout<<endl;
+  cout << endl;
   return 0;
 }

@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 class Student
 {
 protected:
@@ -23,8 +22,7 @@ private:
   string branch;
 
 public:
-  Engineering(string n, int i, string b)
-      : Student(n, i)
+  Engineering(string n, int i, string b) : Student(n, i)
   {
     branch = b;
   }
@@ -43,8 +41,7 @@ private:
   string specialization;
 
 public:
-  Medicine(string n, int i, string s)
-      : Student(n, i)
+  Medicine(string n, int i, string s) : Student(n, i)
   {
     specialization = s;
   }
@@ -63,8 +60,7 @@ private:
   string subject;
 
 public:
-  Science(string n, int i, string sub)
-      : Student(n, i)
+  Science(string n, int i, string sub) : Student(n, i)
   {
     subject = sub;
   }
@@ -79,23 +75,16 @@ public:
 
 int main()
 {
-
-  // Array of base class pointers
   Student *students[3];
-
-  // Creating derived class objects
   students[0] = new Engineering("Ananya", 101, "CSE");
-  students[1] = new Medicine("Riya", 102, "Cardiology");
+  students[1] = new Medicine("Riya", 102, "Medicine");
   students[2] = new Science("Aman", 103, "Physics");
 
-  // Processing using base class pointer
   for (int i = 0; i < 3; i++)
   {
     students[i]->display();
     cout << endl;
   }
-
-  // Free memory
   for (int i = 0; i < 3; i++)
   {
     delete students[i];

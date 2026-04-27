@@ -26,7 +26,8 @@ public:
 
   void display()
   {
-    cout << "Shape: Circle | Radius: " << radius << endl;
+    cout << "Shape: Circle" << endl
+         << "Radius: " << radius << endl;
   }
 };
 
@@ -49,7 +50,8 @@ public:
 
   void display()
   {
-    cout << "Shape: Rectangle | Length: " << length << ", Breadth: " << breadth << endl;
+    cout << "Shape: Rectangle" << endl
+         << "Length: " << length << ", Breadth: " << breadth << endl;
   }
 };
 
@@ -72,33 +74,27 @@ public:
 
   void display()
   {
-    cout << "Shape: Triangle | Base: " << base << ", Height: " << height << endl;
+    cout << "Shape: Triangle" << endl
+         << "Base: " << base << ", Height: " << height << endl;
   }
 };
 
 int main()
 {
   Shape *s;
-
   Circle c(5);
   Rectangle r(10, 4);
   Triangle t(6, 3);
-
   s = &c;
   s->display();
   s->area();
-
   cout << endl;
-
   s = &r;
   s->display();
   s->area();
-
   cout << endl;
-
   s = &t;
   s->display();
   s->area();
-
   return 0;
 }

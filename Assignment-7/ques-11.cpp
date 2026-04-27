@@ -7,7 +7,6 @@ private:
   float value;
 
 public:
-  // Conversion constructor
   Test(float x)
   {
     value = x;
@@ -22,10 +21,7 @@ public:
 int main()
 {
   float f = 5.75;
-
-  Test t = f; // implicit conversion (float → object)
-
+  Test t = f;
   t.display();
-
   return 0;
 }

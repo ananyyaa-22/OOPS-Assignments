@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 class Matrix
 {
 private:
@@ -68,17 +67,12 @@ Matrix operator*(Matrix m1, Matrix m2)
 int main()
 {
   Matrix m1(2, 3), m2(3, 2), m3;
-
   cout << "Matrix 1:\n";
   m1.input();
-
   cout << "Matrix 2:\n";
   m2.input();
-
   m3 = m1 * m2;
-
   cout << "Resultant Matrix:\n";
   m3.display();
-
   return 0;
 }

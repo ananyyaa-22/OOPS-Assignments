@@ -37,18 +37,13 @@ public:
 int main()
 {
   Polygon *p;
-
   Rectangle rect;
   Triangle tri;
-
   rect.set_value(10, 5);
   tri.set_value(10, 5);
-
   p = &rect;
   cout << "Area of Rectangle: " << p->calculate_area() << endl;
-
   p = &tri;
   cout << "Area of Triangle: " << p->calculate_area() << endl;
-
   return 0;
 }

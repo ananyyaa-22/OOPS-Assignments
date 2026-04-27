@@ -1,24 +1,23 @@
 #include <iostream>
 #include <cstring>
 using namespace std;
-
-class STRING
+class String
 {
 private:
   char str[100];
 
 public:
-  STRING(const char s[] = "")
+  String(const char s[] = "")
   {
     strcpy(str, s);
   }
-  bool operator==(STRING s)
+  bool operator==(String s)
   {
     return strcmp(str, s.str) == 0;
   }
-  STRING operator+(STRING s)
+  String operator+(String s)
   {
-    STRING temp;
+    String temp;
     strcpy(temp.str, str);
     strcat(temp.str, s.str);
     return temp;
@@ -31,15 +30,13 @@ public:
 
 int main()
 {
-  STRING s1("Hello"), s2("World"), s3;
+  String s1("Hello"), s2("World"), s3;
   s3 = s1 + s2;
   cout << "Concatenated String: ";
   s3.display();
-
   if (s1 == s2)
     cout << "Strings are Equal" << endl;
   else
     cout << "Strings are Not Equal" << endl;
-
   return 0;
 }

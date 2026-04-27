@@ -1,35 +1,34 @@
 #include <iostream>
 using namespace std;
 
-class Student {
+class Student
+{
 private:
     string name;
     int age;
 
 public:
-    // Overload >> 
-    friend istream& operator>>(istream &in, Student &s) {
+    friend istream &operator>>(istream &in, Student &s)
+    {
         cout << "Enter Name: ";
         in >> s.name;
         cout << "Enter Age: ";
         in >> s.age;
         return in;
     }
-
-    // Overload << 
-    friend ostream& operator<<(ostream &out, Student &s) {
+    friend ostream &operator<<(ostream &out, Student &s)
+    {
         out << "Name: " << s.name << endl;
         out << "Age: " << s.age << endl;
         return out;
     }
 };
 
-int main() {
+int main()
+{
     Student s;
-
-    cin >> s;   
+    cin >> s;
     cout << "\nStudent Details:\n";
-    cout << s; 
-
+    cout << s;
     return 0;
 }

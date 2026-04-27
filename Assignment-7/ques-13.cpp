@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-
 class Polar
 {
 private:
@@ -46,10 +45,7 @@ public:
 int main()
 {
   Polar p(10, 5);
-
   Cartesian c = p;
-
   c.show();
-
   return 0;
 }
