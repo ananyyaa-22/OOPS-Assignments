@@ -39,12 +39,9 @@ int main()
   Array<int> a1(5);
   a1.input();
   a1.display();
-
   cout << endl;
-
   Array<float> a2(3);
   a2.input();
   a2.display();
-
   return 0;
 }

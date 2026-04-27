@@ -51,14 +51,9 @@ public:
 int main()
 {
   Arithmetic<int> obj1(10, 5);
-  cout << "Integer Operations:\n";
   obj1.display();
-
   cout << endl;
-
   Arithmetic<float> obj2(10.5, 2.5);
-  cout << "Float Operations:\n";
   obj2.display();
-
   return 0;
 }
